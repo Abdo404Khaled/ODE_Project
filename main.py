@@ -10,13 +10,13 @@ while True:
     left = input('leftHandSide: ')
     right = input('rightHandSide: ')
     print('Enter Intial Conditions if not applicable enter both -1')
-    intial_y = int(input('y: '))
-    intial_x = int(input('x: '))
+    initial_y = float(input('y: '))
+    initial_x = float(input('x: '))
     left = parse_expr(left)
     right = parse_expr(right)
     print(f'Your function: {left} = {right}')
-    solution = solving_differential_equation(left, right) if intial_x == -1 and intial_y == -1\
-        else solving_differential_equation(left, right, [intial_x, intial_y])
+    solution = solving_differential_equation(left, right) if initial_x == -1 and initial_y == -1\
+        else solving_differential_equation(left, right, [initial_x, initial_y])
     print(f'Applicable Solving Techniques: {solution[0]}')
     print(f'The solution: {solution[1]}')
     print(100*'*')
